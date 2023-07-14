@@ -18,10 +18,7 @@
       "node",
       "leaflet",
       "geojson"],
-    "typeRoots": ["./node_modules/@types"],
-    "paths": {
-      "leaflet/*": ["./node_modules/leaflet"]
-    }
+    "typeRoots": ["./node_modules/@types"]
   },
   "include": [
     "src/**/*.ts"

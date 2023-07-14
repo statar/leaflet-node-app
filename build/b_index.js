@@ -37,8 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 var leaflet = require('leaflet');
-// const global.window.leaflet = require('./node_modules/global.window.leaflet');
-// module.exports = L;
 function initializeMap() {
     return __awaiter(this, void 0, void 0, function () {
         var map, polygon;

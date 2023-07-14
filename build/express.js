@@ -12,8 +12,6 @@ liveReloadServer.server.once("connection", function () {
     }, 100);
 });
 app.use(connectLiveReload());
-// Serve the static files
-// app.use(express.static(path.join(__dirname, '/build')));
 // Route for serving the index.html file
 app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'index.html'));
@@ -21,20 +19,8 @@ app.get('/', function (req, res) {
 app.get('/build/index.js', function (req, res) {
     res.sendFile(path.join(__dirname, '../build/index.js'));
 });
-app.get('/build/browserify_modules.js', function (req, res) {
-    res.sendFile(path.join(__dirname, '../build/browserify_modules.js'));
-});
-app.get('/build/b_index.js', function (req, res) {
-    res.sendFile(path.join(__dirname, '../build/b_index.js'));
-});
-app.get('/build/map.js', function (req, res) {
-    res.sendFile(path.join(__dirname, '../build/map.js'));
-});
 app.get('/leaflet.css', function (req, res) {
-    res.sendFile(path.join(__dirname, '../leaflet.css'));
-});
-app.get('/leaflet', function (req, res) {
-    res.sendFile(path.join(__dirname, '../node_modules/leaflet'));
+    res.sendFile(path.join(__dirname, './leaflet.css'));
 });
 // Start the server
 app.listen(port, function () {

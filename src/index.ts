@@ -2,13 +2,8 @@ const leaflet = require('leaflet');
 
 async function initializeMap() {
 
-  console.warn("HEYY ")
   if (typeof window === 'undefined')
     return;
-
-  // const L = require('global.window.leaflet');
-  // const L = await import("global.window.leaflet");
-
 
   const map = leaflet.map('map').setView([51.505, -0.09], 13);
   leaflet.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
