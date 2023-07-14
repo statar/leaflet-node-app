@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev1": "nodemon --watch 'src' --exec 'ts-node' src/express.ts",
-    "browserify": "browserify src/modules.js -o build/browserify_modules.js && browserify build/index.js -o build/b_index.js",
+    "browserify": "browserify build/index.js -o build/b_index.js",
     "dev": "npm run build && npm run browserify && nodemon src/express.ts -e html,js,css,ts",
     "build": "rm -rf build && tsc",
     "start": "npm run build --silent -scripts-prepend-node-path && node build/index.js"
