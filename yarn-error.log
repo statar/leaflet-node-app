@@ -1,0 +1,60 @@
+Arguments: 
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js add --dev typescript nodemon webpack webpack-cli webpack-dev-server ts-loader
+
+PATH: 
+  /opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.16.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/sevnurtatar/Projects/ts-leaflet-app/package.json: Unexpected string in JSON at position 566
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "my-typescript-project",
+    "version": "1.0.0",
+    "description": "TypeScript Leaflet Project",
+    "main": "index.js",
+    "scripts": {
+      "dev": "nodemon",
+      "build": "webpack --mode production",
+      "build:prod": "yarn build"
+    },
+    "author": "Sevnur",
+    "license": "MIT",
+    "devDependencies": {
+      "@types/leaflet": "^1.7.4",
+      "nodemon": "^2.0.13",
+      "ts-loader": "^9.2.6",
+      "typescript": "^4.4.3",
+      "webpack": "^5.51.1",
+      "webpack-cli": "^4.8.0",
+      "webpack-dev-server": "^4.1.0"
+    },
+    "dependencies": {
+      "leaflet": "^1.7.1"
+    }
+  }
+  "scripts": {
+    "dev": "nodemon",
+    "build": "webpack --mode production",
+    "build:prod": "yarn build"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

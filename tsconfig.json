@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es7",
+      "dom"
+    ],
+    "outDir": "build",
+    "allowJs": true,
+    "rootDirs": ["src", "node_modules", "build"],
+    "strict": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "leaflet",
+      "geojson"],
+    "typeRoots": ["./node_modules/@types"],
+    "paths": {
+      "leaflet/*": ["./node_modules/leaflet"]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

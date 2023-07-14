@@ -1,0 +1,35 @@
+{
+  "name": "my-typescript-project",
+  "version": "1.0.0",
+  "description": "TypeScript Leaflet Project",
+  "main": "index.js",
+  "scripts": {
+    "dev1": "nodemon --watch 'src' --exec 'ts-node' src/express.ts",
+    "browserify": "browserify src/modules.js -o build/browserify_modules.js && browserify build/index.js -o build/b_index.js",
+    "dev": "npm run build && npm run browserify && nodemon src/express.ts -e html,js,css,ts",
+    "build": "rm -rf build && tsc",
+    "start": "npm run build --silent -scripts-prepend-node-path && node build/index.js"
+  },
+  "author": "Sevnur",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/leaflet": "^1.9.3",
+    "@types/node": "^20.4.1",
+    "html-webpack-plugin": "^5.5.3",
+    "nodemon": "^3.0.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "connect-livereload": "^0.6.1",
+    "express-generator": "^4.16.1",
+    "leaflet": "^1.9.4",
+    "livereload": "^0.9.3",
+    "reload": "^3.2.1"
+  }
+}
